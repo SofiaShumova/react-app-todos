@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchPanel = () => {
+const SearchPanel = ({ onSearch }) => {
   const searchText = 'Type here to search...';
 
   return (
@@ -10,6 +10,7 @@ const SearchPanel = () => {
       aria-label="Default"
       aria-describedby="inputGroup-sizing-default"
       placeholder={searchText}
+      onChange={(e) => onSearch(e.target.value)}
     />
   );
 };
